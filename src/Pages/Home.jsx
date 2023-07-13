@@ -31,7 +31,7 @@ function Home() {
             })
     }, []);
     useEffect(() => {
-        console.log("Region or country name changed:", region, countryName);
+        // console.log("Region or country name changed:", region, countryName);
 
         let filterCountries = countriesList;
         if (region.length) {
@@ -39,6 +39,9 @@ function Home() {
                 if (country.region === region) return true;
                 return false;
             });
+            setfilterCountriesList(filterCountries);
+        } else {
+            filterCountries = countriesList
             setfilterCountriesList(filterCountries);
         };
         if (countryName !== '') {
@@ -80,7 +83,6 @@ function Home() {
                     </Select>
                 </FormControl>
             </div>
-
             <div className="country-card-wrapper">
                 {
                     filterCountriesList.map(country => (
