@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 export default function CountryCard({ name, capital, population, flagUrl }) {
     return (
-        <Card sx={{ maxWidth: 345, width: 200 }}>
+        <Card sx={{ maxWidth: 345, width: 200, height: 320 }}>
             <CardMedia
                 component="img"
                 height={140}
